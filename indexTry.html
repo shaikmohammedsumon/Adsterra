@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open Multiple Links</title>
+    <title>Auto Open Links on Reload</title>
 
     <style>
         body {
@@ -17,29 +16,24 @@
             background: #f2f2f2;
         }
 
-        button {
-            padding: 15px 30px;
-            font-size: 18px;
-            background: #28a745;
-            color: white;
-            border: none;
+        .message {
+            text-align: center;
+            padding: 20px;
+            background: white;
             border-radius: 8px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #1e7e34;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
     </style>
-
 </head>
 
 <body>
 
-    <button onclick="openLinks()">Open All Links</button>
+    <div class="message">
+        <h2>Opening Links...</h2>
+        <p>If tabs don't open, please <b>Allow Popups</b> in your browser settings.</p>
+    </div>
 
     <script>
-
         var links = [
             "https://oddlystudent.com/mfnrcnr8s0?key=57af793f39e802235bfd0b19ae7a05f0",
             "https://oddlystudent.com/e8hu5kxg?key=0a451d6518a2cb10ffe09eef4138a8d5",
@@ -53,14 +47,17 @@
             "https://oddlystudent.com/zhxjhevzdz?key=813d0363b96eb9c3ba068d86334f5c87"
         ];
 
+        // এই ফাংশনটি পেজ লোড হওয়ার সাথে সাথে চলবে
+        window.onload = function () {
+            openLinks();
+        };
+
         function openLinks() {
-
-            for (let i = 0; i < links.length; i++) {
-                window.open(links[i], "_blank");
-            }
-
+            links.forEach(function (url) {
+                // সরাসরি উইন্ডো ওপেন করার চেষ্টা
+                window.open(url, "_blank");
+            });
         }
-
     </script>
 
 </body>
