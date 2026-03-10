@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Multiple Links</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f2f2f2;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1e7e34;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <button onclick="openLinks()">Open All Links</button>
+
+    <script>
+
+        var links = [
+            "https://oddlystudent.com/mfnrcnr8s0?key=57af793f39e802235bfd0b19ae7a05f0",
+            "https://oddlystudent.com/e8hu5kxg?key=0a451d6518a2cb10ffe09eef4138a8d5",
+            "https://oddlystudent.com/khcsj2ja0y?key=6d8064aca8b3dae68e42fdc44aeda4d6",
+            "https://oddlystudent.com/shuc15d3ej?key=b4be510dee2c2948c9c950128dc3a98e",
+            "https://oddlystudent.com/wn07d2sfhd?key=1a7fc13f8643176ad296640d70cc9f42",
+            "https://oddlystudent.com/qetu0ez6i?key=332e411c57ee39cf6d94bf98b9861b6a",
+            "https://oddlystudent.com/ce2zvdzc84?key=a33ad3295196a9c7055a22bc8505d45e",
+            "https://oddlystudent.com/cqf9xakhxg?key=1958ca2c876ea1ebdcdf74a137788241",
+            "https://oddlystudent.com/j2nt6w16g?key=ee3920b4310705c8ca435d903b31cb23",
+            "https://oddlystudent.com/zhxjhevzdz?key=813d0363b96eb9c3ba068d86334f5c87"
+        ];
+
+        function openLinks() {
+
+            for (let i = 0; i < links.length; i++) {
+                window.open(links[i], "_blank");
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
